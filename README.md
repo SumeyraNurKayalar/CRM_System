@@ -32,3 +32,11 @@ if dp[i][b] != dp[i - 1][b]: ile eğer i numaralı kampanya seçildiyse içeri g
 selected_campaigns.append(i - 1) ile seçilen kampanyanın maaliyetini bütçeden düşülerek kalan bütçe güncellenir.
 b -= costs[i - 1] ile seçilen kampanyanın maaliyeri bütçeden düşülerek kalan bütçe güncellenir.
 return dp[n][budget], selected_campaigns ile en yüksek kazanç ve seçilen kampanya numaraları döndürülür.
+
+---------------
+Dinamik programlamanın diğer algoritma oluşturma yöntemlerinden temel farkı alt problemleri saklayarak tekrar hesaplamaları önleyen bir optimizasyon tekniği olmasıdır. Bu şekilde diğer algoritma tasarım yçntemlerine kısayla daha verimli çalışabilir.
+---------------
+Müşteri Destek Temsilcisi Yönlendirme kısmında müşteri talepleri ve temsilcilerin uygunluk durumlarıdinamik olarak değiştiği için dinamik programlama tabanlıı algoritma kullanılır. Burada amaç topla müşteri taleplerini en düşük maaliyetle karşılayacak şekilde temsilciler yönlendirilir ve bu kod her müşteri talebi için temsilciyi kullanmama ve temsilciyi belli sayıda müşteriye atama arasında minimum maaliyetli seçeneği alıp en iyi atamayı yapar.
+
+---------------
+Pazarlama Kampanyası Seçimi kısmında pazarlama kampanyalarının belirli bir bütçe sınırı olduğu için dinamik programlama kullanılır. Burada amaç bütçeyi aşmadan, en yüksek yatırım getirisi sağlayacak kampanyaları seçmektir. Bu dinamik programlama tabanlı paarlama kampanyası seçme probleminde amaç belirlibir bütçeyle en yüksek yatırım getirisini elde etmektir.
